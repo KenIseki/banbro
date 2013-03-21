@@ -3,7 +3,7 @@ package banbro.model.bdx;
 import java.util.HashMap;
 import java.util.Map;
 
-import banbro.model.bdx.Guitar.Stroke;
+import banbro.model.Stroke;
 
 public class GuitarNote extends SingleNote implements ChordNote {
 

@@ -58,6 +58,9 @@ public class GamepadButtonSettingDialog extends ButtonSettingDialog {
 
 	@Override
 	protected void pushDefaultButton() {
+		for (int b : getButtons()) {
+			getSpinner(b).setValue(b);
+		}
 	}
 
 	@Override

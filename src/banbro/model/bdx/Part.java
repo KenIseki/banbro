@@ -5,8 +5,7 @@ import java.util.Collections;
 import java.util.EnumMap;
 import java.util.List;
 
-import banbro.model.score.Score.Clef;
-
+import banbro.model.Clef;
 
 public class Part implements Tone {
 

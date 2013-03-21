@@ -2,7 +2,7 @@ package banbro.model.bdx;
 
 import java.util.Arrays;
 
-import banbro.model.score.Score.Accidental;
+import banbro.model.Accidental;
 
 public class GuitarChord {
 	/**

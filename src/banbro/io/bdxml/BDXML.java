@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import banbro.io.DefaultXML;
+import banbro.model.Clef;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXDate;
 import banbro.model.bdx.BaseChord;
@@ -24,7 +25,6 @@ import banbro.model.bdx.PlayLevel;
 import banbro.model.bdx.SingleNote;
 import banbro.model.bdx.StepValue;
 import banbro.model.bdx.Voicing;
-import banbro.model.score.Score.Clef;
 
 public class BDXML extends DefaultXML implements BDXMLConstants {
 	private static final char[] REPLACE_CHARS = new char[] {

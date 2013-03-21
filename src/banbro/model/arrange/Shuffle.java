@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import banbro.model.Clef;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BinaryUtil;
 import banbro.model.bdx.Chord;
@@ -18,7 +19,6 @@ import banbro.model.bdx.PlayLevel;
 import banbro.model.bdx.SingleNote;
 import banbro.model.bdx.StepValue;
 import banbro.model.bdx.Voicing;
-import banbro.model.score.Score.Clef;
 
 public class Shuffle extends AbstractArrange {
 

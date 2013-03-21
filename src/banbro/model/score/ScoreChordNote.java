@@ -1,7 +1,10 @@
 package banbro.model.score;
 
+import banbro.model.Accidental;
+import banbro.model.Clef;
+import banbro.model.Pitch;
+import banbro.model.Stroke;
 import banbro.model.bdx.BDX;
-import banbro.model.bdx.Guitar.Stroke;
 
 /**
  * コード用の音符

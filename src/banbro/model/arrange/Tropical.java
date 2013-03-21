@@ -91,6 +91,9 @@ public class Tropical extends AbstractArrange {
 
 	@Override
 	protected void arrangeMainPart(Part p) {
+		if (p.getInstrument()==BDXInstrument.MUSIC_BOX) {
+			BDXUtil.shiftNotes(p, 12);
+		}
 		p.setInstrument(BDXInstrument.STEEL_DRM);
 	}
 

@@ -1,6 +1,5 @@
 package banbro.model.bdx;
 
-
 public class Note implements Comparable<Note> {
 
 	protected int _noteNum;
@@ -10,7 +9,7 @@ public class Note implements Comparable<Note> {
 	}
 
 	public InstrumentType getType() {
-		return InstrumentType.NONE;
+		return null;
 	}
 
 	public int getNoteNum() {

@@ -1,5 +1,7 @@
 package banbro.model.score;
 
+import banbro.model.Clef;
+
 /**
  * 楽譜の先頭に書かれる要素
  * 音部記号、拍子、調

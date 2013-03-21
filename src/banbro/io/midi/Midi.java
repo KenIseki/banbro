@@ -13,6 +13,7 @@ import javax.sound.midi.ShortMessage;
 import javax.sound.midi.SysexMessage;
 import javax.sound.midi.Track;
 
+import banbro.model.Stroke;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXInstrument;
 import banbro.model.bdx.BaseChord;
@@ -20,7 +21,6 @@ import banbro.model.bdx.BinaryUtil;
 import banbro.model.bdx.Chord;
 import banbro.model.bdx.DrumNote;
 import banbro.model.bdx.Guitar;
-import banbro.model.bdx.Guitar.Stroke;
 import banbro.model.bdx.GuitarChord;
 import banbro.model.bdx.GuitarNote;
 import banbro.model.bdx.InstrumentType;

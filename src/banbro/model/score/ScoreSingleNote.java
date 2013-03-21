@@ -3,6 +3,8 @@ package banbro.model.score;
 import java.util.ArrayList;
 import java.util.List;
 
+import banbro.model.Clef;
+
 /**
  * ‰¹•„1ŒÂ
  */

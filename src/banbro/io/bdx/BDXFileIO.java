@@ -11,6 +11,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import banbro.io.FileIO;
+import banbro.model.Clef;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXDate;
 import banbro.model.bdx.BDXInstrument;
@@ -30,7 +31,6 @@ import banbro.model.bdx.StepValue;
 import banbro.model.bdx.VibratoShape;
 import banbro.model.bdx.Voicing;
 import banbro.model.bdx.Voicing.Spread;
-import banbro.model.score.Score.Clef;
 
 public class BDXFileIO {
 

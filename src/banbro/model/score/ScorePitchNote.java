@@ -1,5 +1,8 @@
 package banbro.model.score;
 
+import banbro.model.Accidental;
+import banbro.model.Pitch;
+
 public class ScorePitchNote extends ScoreSingleNote implements IStemNote {
 
 	private Pitch _step;

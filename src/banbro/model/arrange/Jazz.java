@@ -3,6 +3,7 @@ package banbro.model.arrange;
 import java.util.List;
 
 import banbro.model.bdx.BDXInstrument;
+import banbro.model.bdx.BDXUtil;
 import banbro.model.bdx.Part;
 import banbro.model.bdx.StepValue;
 
@@ -90,6 +91,9 @@ public class Jazz extends Shuffle {
 
 	@Override
 	protected void arrangeMainPart(Part p) {
+		if (p.getInstrument()==BDXInstrument.MUSIC_BOX) {
+			BDXUtil.shiftNotes(p, 12);
+		}
 		p.setInstrument(BDXInstrument.SOPR_SAX);
 	}
 

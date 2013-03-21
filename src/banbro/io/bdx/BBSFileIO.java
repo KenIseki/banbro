@@ -10,6 +10,7 @@ import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import banbro.io.FileIO;
+import banbro.model.Clef;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXInstrument;
 import banbro.model.bdx.BDXUtil;
@@ -18,7 +19,6 @@ import banbro.model.bdx.InstrumentType;
 import banbro.model.bdx.Note;
 import banbro.model.bdx.Part;
 import banbro.model.bdx.PlayLevel;
-import banbro.model.score.Score.Clef;
 
 public class BBSFileIO {
 

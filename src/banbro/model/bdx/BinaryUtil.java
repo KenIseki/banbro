@@ -8,9 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-import banbro.model.score.Score.Accidental;
-import banbro.model.score.Score.Pitch;
-
+import banbro.model.Accidental;
+import banbro.model.Pitch;
 
 /**
  * バイナリの操作に関する便利メソッド集

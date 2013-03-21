@@ -3,6 +3,7 @@ package banbro.model.arrange;
 import java.util.ArrayList;
 import java.util.List;
 
+import banbro.model.Stroke;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BinaryUtil;
 import banbro.model.bdx.Chord;
@@ -14,7 +15,6 @@ import banbro.model.bdx.Part;
 import banbro.model.bdx.SingleNote;
 import banbro.model.bdx.StepValue;
 import banbro.model.bdx.Voicing;
-import banbro.model.bdx.Guitar.Stroke;
 
 public class Reverse extends AbstractArrange {
 

@@ -8,6 +8,8 @@ import org.xml.sax.SAXException;
 
 import banbro.io.DefaultParser;
 import banbro.io.DefaultXML;
+import banbro.model.Clef;
+import banbro.model.Stroke;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXDate;
 import banbro.model.bdx.BDXInstrument;
@@ -28,9 +30,7 @@ import banbro.model.bdx.SingleNote;
 import banbro.model.bdx.StepValue;
 import banbro.model.bdx.VibratoShape;
 import banbro.model.bdx.Voicing;
-import banbro.model.bdx.Guitar.Stroke;
 import banbro.model.bdx.Voicing.Spread;
-import banbro.model.score.Score.Clef;
 
 class BDXMLParser extends DefaultParser implements BDXMLConstants {
 

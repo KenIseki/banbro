@@ -1,7 +1,7 @@
 package banbro.model.bdx;
 
-import banbro.model.score.Score.Accidental;
-import banbro.model.score.Score.Pitch;
+import banbro.model.Accidental;
+import banbro.model.Pitch;
 
 public class BaseChord extends Chord {
 	public enum Name {

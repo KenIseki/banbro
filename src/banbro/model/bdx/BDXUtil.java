@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.List;
 
-
 /**
  * BDXに関する便利メソッド集
  */

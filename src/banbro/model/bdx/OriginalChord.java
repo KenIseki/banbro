@@ -6,9 +6,6 @@ public class OriginalChord extends Chord {
 
 	private int _num;
 
-	public OriginalChord() {
-	}
-
 	/**
 	 * @param num 0à»è„
 	 */

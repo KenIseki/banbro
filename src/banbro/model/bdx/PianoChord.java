@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import banbro.model.Accidental;
 import banbro.model.bdx.Voicing.Spread;
-import banbro.model.score.Score.Accidental;
-
 
 public class PianoChord {
 

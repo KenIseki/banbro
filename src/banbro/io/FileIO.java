@@ -24,7 +24,7 @@ public class FileIO {
 	}
 
 	public static List<File> getSupportedFileList(List<File> files, List<String> exs) {
-		return getSupportedFileList(files.toArray(new File[0]), exs);
+		return getSupportedFileList(files.toArray(new File[files.size()]), exs);
 	}
 
 	public static List<File> getSupportedFileList(File[] files, List<String> exs) {

@@ -2,6 +2,8 @@ package banbro.model.arrange;
 
 import java.util.List;
 
+import banbro.model.Accidental;
+import banbro.model.Pitch;
 import banbro.model.bdx.BDX;
 import banbro.model.bdx.BDXInstrument;
 import banbro.model.bdx.BaseChord;
@@ -17,8 +19,6 @@ import banbro.model.bdx.PianoChord;
 import banbro.model.bdx.SingleNote;
 import banbro.model.bdx.StepValue;
 import banbro.model.bdx.VibratoShape;
-import banbro.model.score.Score.Accidental;
-import banbro.model.score.Score.Pitch;
 
 public class Horror extends ChangeKey {
 

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class BDX {
 	/** 1”‚ÌStep” */
 	public static final int TIME_BASE = 12;
