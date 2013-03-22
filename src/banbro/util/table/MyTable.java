@@ -2,6 +2,7 @@ package banbro.util.table;
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JTable;
 import javax.swing.table.JTableHeader;
@@ -15,12 +16,30 @@ public class MyTable extends JTable {
 	public Color getOddRowBackground() {
 		return _oddRowBackground;
 	}
+
 	public void setOddRowBackground(Color bg) {
 		_oddRowBackground = bg;
 	}
+
 	@Override
 	protected JTableHeader createDefaultTableHeader() {
 		return new AutoResizeTableHeader(getColumnModel());
+	}
+
+	@Override
+	public String getToolTipText(MouseEvent event) {
+		int row = rowAtPoint(event.getPoint());
+		int col = columnAtPoint(event.getPoint());
+		if (row<getRowCount() && col<getColumnCount()) {
+			Object value = getModel().getValueAt(row, col);
+			if (value==null) {
+				return null;
+			} else {
+				String text = value.toString();
+				return text.isEmpty() ? null : text;
+			}
+		}
+		return null;
 	}
 
 	@Override

@@ -1,6 +1,10 @@
 package banbro.util.undo;
 
-public class CommandStackEvent {
+import java.util.EventObject;
+
+public class CommandStackEvent extends EventObject {
+	private static final long serialVersionUID = 1L;
+
 	public static final int EXECUTE = 1;
 	public static final int UNDO = 2;
 	public static final int REDO = 3;
@@ -11,6 +15,7 @@ public class CommandStackEvent {
 	protected CommandStack _stack;
 
 	public CommandStackEvent(CommandStack stack, int state, Command command) {
+		super(stack);
 		_stack = stack;
 		_state = state;
 		_command = command;
