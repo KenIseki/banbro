@@ -1,9 +1,8 @@
 package banbro.io.gamepad;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.swing.event.EventListenerList;
+
+import banbro.util.PairSet;
 
 public abstract class InputDevice {
 	private final EventListenerList _listenerList = new EventListenerList();
@@ -11,13 +10,12 @@ public abstract class InputDevice {
 	protected boolean _isRun;
 	protected ButtonFlag _buttonFlag;
 
-	private Map<Integer, Integer> _buttonSetting;  // ボタン名(番号)->デバイスのボタン番号
-	private Map<Integer, Integer> _buttonMap;  // デバイスのボタン番号->ボタン名(番号)
+	private PairSet<Integer, Integer> _buttonPairSet;  // ボタン名(番号)<->デバイスのボタン番号
 
 	public InputDevice() {
 		_buttonFlag = new ButtonFlag();
 		_isRun = false;
-		_buttonSetting = new HashMap<Integer, Integer>();
+		_buttonPairSet = new PairSet<>();
 	}
 
 	public void addGamepadButtonListener(GamepadButtonListener l) {
@@ -58,7 +56,7 @@ public abstract class InputDevice {
 	 * @see GamepadButtonEvent
 	 */
 	public Integer getButtonSetting(int n) {
-		return _buttonSetting.get(n);
+		return _buttonPairSet.getRightValue(n);
 	}
 	/**
 	 * ボタンを設定する。
@@ -70,19 +68,11 @@ public abstract class InputDevice {
 		if (_isRun) {
 			return;
 		}
-		_buttonSetting.put(n, b);
-		_buttonMap = null;
+		_buttonPairSet.put(n, b);
 	}
 
 	protected Integer toButtonNum(int b) {
-		if (_buttonMap==null) {
-			_buttonMap = new HashMap<Integer, Integer>();
-			for (Integer n : _buttonSetting.keySet()) {
-				Integer b2 = _buttonSetting.get(n);
-				_buttonMap.put(b2, n);
-			}
-		}
-		return _buttonMap.get(b);
+		return _buttonPairSet.getLeftValue(b);
 	}
 
 	public void pollStart() {
@@ -96,6 +86,12 @@ public abstract class InputDevice {
 
 	public void pollStop() {
 		_isRun = false;
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		pollStop();
+		super.finalize();
 	}
 
 }

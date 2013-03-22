@@ -1,14 +1,38 @@
 package banbro.io.gamepad;
 
 import net.java.games.input.Component;
+import net.java.games.input.ControllerEnvironment;
 import net.java.games.input.Component.Identifier;
 import net.java.games.input.Controller;
 import net.java.games.input.Controller.Type;
 
+/**
+ * ゲームパッドの状態を監視し、ボタンイベントを発生させる
+ * このパッケージ内でJInputが必要なのはこのクラスだけ
+ */
 public class Gamepad extends InputDevice {
 	private static final float EPSILON = 0.0001f;
+	
+	/**
+	 * ゲームパッドの取得。現状、最初に見つかった1つのゲームパッドを返す。
+	 * @return
+	 */
+	public static Controller getController() {
+		ControllerEnvironment ce = ControllerEnvironment.getDefaultEnvironment();
+		Controller[] cs = ce.getControllers();
+		for (Controller cont : cs) {
+			if (cont.getType()==Type.GAMEPAD) {
+				return cont;
+			}
+		}
+		return null;
+	}
 
 	protected Controller _controller;
+
+	public Gamepad() {
+		this(null);
+	}
 
 	public Gamepad(Controller controller) {
 		super();

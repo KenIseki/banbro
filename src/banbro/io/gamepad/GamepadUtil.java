@@ -2,26 +2,7 @@ package banbro.io.gamepad;
 
 import java.util.Arrays;
 
-import net.java.games.input.Controller;
-import net.java.games.input.Controller.Type;
-import net.java.games.input.ControllerEnvironment;
-
 public class GamepadUtil {
-
-	/**
-	 * ゲームパッドの取得。現状、最初に見つかった1つのゲームパッドを返す。
-	 * @return
-	 */
-	public static Controller getGamepad() {
-		ControllerEnvironment ce = ControllerEnvironment.getDefaultEnvironment();
-		Controller[] cs = ce.getControllers();
-		for (Controller cont : cs) {
-			if (cont.getType()==Type.GAMEPAD) {
-				return cont;
-			}
-		}
-		return null;
-	}
 
 	/**
 	 * @param buttonFlag
