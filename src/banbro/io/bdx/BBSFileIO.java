@@ -122,6 +122,7 @@ public class BBSFileIO {
 			if (type==InstrumentType.SINGLE) {
 				p.setPan(BinaryUtil.byteToPan(binary.get(0x00C4+16*i)));
 			}
+			// 演奏レベルをバンブラDX用に変換　計算式は適当
 			int playLevel = binary.get(0x00C5+16*i);
 			int levelPro = Math.min(playLevel/16, 5);
 			int levelAma = Math.min(playLevel%16, 5);
@@ -131,6 +132,7 @@ public class BBSFileIO {
 			p.setPlayLevel(PlayLevel.MASTER, levelPro+levelAma);
 			p.setCloneNum(binary.get(0x00C6+16*i));
 			// 譜面
+			// TODO 音程がおかしい　楽器によってオクターブ補正しなければいけないっぽい
 			p.clearNotes();
 			ad = binary.get(0x00C0+16*i) + binary.get(0x00C1+16*i)*0x100 + 0x40;
 			int length = 4*bdx.getTimeNum();

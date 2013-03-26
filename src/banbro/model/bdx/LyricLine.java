@@ -24,7 +24,7 @@ public class LyricLine {
 			}
 		}
 		_line.add(new StepValue<LyricNote>(step, note));
-		Collections.sort(_line);
+		Collections.sort(_line, StepValue.STEP_COMPARATOR);
 	}
 	public int getStep() {
 		if (_line.isEmpty()) {

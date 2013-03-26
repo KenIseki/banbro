@@ -35,8 +35,38 @@ public class MyTable extends JTable {
 			if (value==null) {
 				return null;
 			} else {
-				String text = value.toString();
-				return text.isEmpty() ? null : text;
+				StringBuilder sb = new StringBuilder();
+				for (char c : value.toString().toCharArray()) {
+					switch (c) {
+					case '&':
+						sb.append("&amp;");
+						break;
+					case '<':
+						sb.append("&lt;");
+						break;
+					case '>':
+						sb.append("&gt;");
+						break;
+					case '"':
+						sb.append("&quot;");
+						break;
+					case '\'':
+						sb.append("&#39;");
+						break;
+					case '\n':
+						sb.append("<br>");
+						break;
+					default:
+						sb.append(c);
+						break;
+					}
+				}
+				if (sb.length()==0) {
+					return null;
+				}
+				sb.insert(0, "<html>");
+				sb.append("</html>");
+				return sb.toString();
 			}
 		}
 		return null;

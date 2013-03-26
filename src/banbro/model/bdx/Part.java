@@ -423,7 +423,7 @@ public class Part implements Tone {
 			List<Chord> chordSet = new ArrayList<Chord>();
 			chordSet.add(c);
 			addChordSet(step, chordSet);
-			Collections.sort(_chordSetList);
+			Collections.sort(_chordSetList, StepValue.STEP_COMPARATOR);
 		}
 	}
 
@@ -547,7 +547,7 @@ public class Part implements Tone {
 		if (_volume.isEmpty()) {
 			_volume.add(new StepValue<Integer>(0, 99));
 		} else {
-			Collections.sort(_volume);
+			Collections.sort(_volume, StepValue.STEP_COMPARATOR);
 			StepValue<Integer> sv = _volume.get(0);
 			sv.setStep(0);
 			for (int i=_volume.size()-1; i>0; i--) {
@@ -561,7 +561,7 @@ public class Part implements Tone {
 			if (_bass.isEmpty()) {
 				_bass.add(new StepValue<Integer>(0, 24));
 			} else {
-				Collections.sort(_bass);
+				Collections.sort(_bass, StepValue.STEP_COMPARATOR);
 				StepValue<Integer> sv = _bass.get(0);
 				sv.setStep(0);
 				for (int i=_bass.size()-1; i>0; i--) {
@@ -580,7 +580,7 @@ public class Part implements Tone {
 			if (_button.isEmpty()) {
 				_button.add(new StepValue<Integer>(0, 0));
 			} else {
-				Collections.sort(_button);
+				Collections.sort(_button, StepValue.STEP_COMPARATOR);
 				StepValue<Integer> sv = _button.get(0);
 				sv.setStep(0);
 				for (int i=_button.size()-1; i>0; i--) {
@@ -599,7 +599,7 @@ public class Part implements Tone {
 			if (_clef.isEmpty()) {
 				_clef.add(new StepValue<Clef>(0, Clef.G2));
 			} else {
-				Collections.sort(_clef);
+				Collections.sort(_clef, StepValue.STEP_COMPARATOR);
 				StepValue<Clef> sv = _clef.get(0);
 				sv.setStep(0);
 				for (int i=_clef.size()-1; i>0; i--) {
@@ -617,7 +617,7 @@ public class Part implements Tone {
 			}
 		} else if (_type==InstrumentType.GUITAR || _type==InstrumentType.PIANO) {
 			if (!_chordSetList.isEmpty()) {
-				Collections.sort(_chordSetList);
+				Collections.sort(_chordSetList, StepValue.STEP_COMPARATOR);
 				StepValue<List<Chord>> sv = _chordSetList.get(0);
 				sv.setStep(0);
 				for (int i=_chordSetList.size()-1; i>0; i--) {
@@ -636,7 +636,7 @@ public class Part implements Tone {
 		}
 		if (_type==InstrumentType.PIANO) {
 			if (!_voicing.isEmpty()) {
-				Collections.sort(_voicing);
+				Collections.sort(_voicing, StepValue.STEP_COMPARATOR);
 				StepValue<Voicing> sv = _voicing.get(0);
 				sv.setStep(0);
 				for (int i=_voicing.size()-1; i>0; i--) {

@@ -45,10 +45,9 @@ public class BaseChord extends Chord {
 	private Name _name;
 
 	/**
-	 * @param root 0:C 1:D 2:E 3:F 4:G 5:A 6:B 15:オリジナル
-	 * @param accidental 0:なし 1:シャープ 2:フラット
-	 * @param name 0:M 1:m 2:7 3:M7 4:m7 5:dim 6:m7b5 7:aug 8:sus4 9:7sus4 10:6 11:add9
-	 * オリジナルコードなら番号
+	 * @param root
+	 * @param accidental
+	 * @param name
 	 */
 	public BaseChord(Pitch root, Accidental accidental, Name name) {
 		setChord(root, accidental, name);
@@ -76,6 +75,9 @@ public class BaseChord extends Chord {
 	}
 
 	public void setChord(Pitch root, Accidental accidental, Name name){
+		if (root==null || accidental==null || name==null) {
+			throw new IllegalArgumentException();
+		}
 		_root = root;
 		_accidental = accidental;
 		_name = name;

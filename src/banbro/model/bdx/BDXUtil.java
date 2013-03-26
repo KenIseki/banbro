@@ -297,7 +297,7 @@ public class BDXUtil {
 
 	/**
 	 * @param <V>
-	 * @param list
+	 * @param list stepでソートされたリスト
 	 * @param step
 	 * @param last true:同じstepがある場合、最後の要素番号を返す。
 	 * @return
@@ -346,7 +346,7 @@ public class BDXUtil {
 
 	/**
 	 * @param <V>
-	 * @param list
+	 * @param list stepでソートされたリスト
 	 * @param step
 	 * @param last true:同じstepがある場合、最後の要素を返す。
 	 * @return

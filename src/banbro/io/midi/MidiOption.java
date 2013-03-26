@@ -354,8 +354,6 @@ public class MidiOption {
 					}
 				}
 			}
-			br.close();
-			in.close();
 		} catch (FileNotFoundException e) {
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -1,10 +1,20 @@
 package banbro.model.bdx;
 
+import java.util.Comparator;
+
 /**
  * ステップと値の組
  * @param <V> 値の型
  */
-public class StepValue<V> implements Comparable<StepValue<V>> {
+public class StepValue<V> {
+
+	/** stepでソートする時に使うComparator */
+	public static final Comparator<StepValue<?>> STEP_COMPARATOR = new Comparator<StepValue<?>>() {
+		@Override
+		public int compare(StepValue<?> o1, StepValue<?> o2) {
+			return o1.getStep() - o2.getStep();
+		}
+	};
 
 	private int _step;
 	private V _value;
@@ -32,11 +42,6 @@ public class StepValue<V> implements Comparable<StepValue<V>> {
 
 	public void setValue(V value) {
 		_value = value;
-	}
-
-	@Override
-	public int compareTo(StepValue<V> o) {
-		return _step - o.getStep();
 	}
 
 	public StepValue<V> clone() {

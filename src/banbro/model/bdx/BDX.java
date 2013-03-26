@@ -435,7 +435,7 @@ public class BDX {
 		if (_tempo.isEmpty()) {
 			_tempo.add(new StepValue<Integer>(0, 100));
 		} else {
-			Collections.sort(_tempo);
+			Collections.sort(_tempo, StepValue.STEP_COMPARATOR);
 			StepValue<Integer> sv = _tempo.get(0);
 			sv.setStep(0);
 			for (int i=_tempo.size()-1; i>0; i--) {
@@ -448,7 +448,7 @@ public class BDX {
 		if (_key.isEmpty()) {
 			_key.add(new StepValue<Integer>(0, 0));
 		} else {
-			Collections.sort(_key);
+			Collections.sort(_key, StepValue.STEP_COMPARATOR);
 			StepValue<Integer> sv = _key.get(0);
 			sv.setStep(0);
 			for (int i=_key.size()-1; i>0; i--) {
@@ -465,7 +465,7 @@ public class BDX {
 			}
 		}
 		if (!_lyricTiming.isEmpty()) {
-			Collections.sort(_lyricTiming);
+			Collections.sort(_lyricTiming, StepValue.STEP_COMPARATOR);
 			for (int i=_lyricTiming.size()-1; i>0; i--) {
 				StepValue<String> step = _lyricTiming.get(i);
 				if (step.getStep()>maxStep) {

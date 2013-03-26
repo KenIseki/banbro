@@ -36,10 +36,7 @@ public class Gamepad extends InputDevice {
 
 	public Gamepad(Controller controller) {
 		super();
-		if (controller!=null && controller.getType()!=Type.GAMEPAD) {
-			throw new IllegalArgumentException();
-		}
-		_controller = controller;
+		setController(controller);
 		int[] buttons = {
 				GamepadButtonEvent.Button_Y,
 				GamepadButtonEvent.Button_X,
@@ -53,6 +50,16 @@ public class Gamepad extends InputDevice {
 		for (int n : buttons) {  // デフォルト設定
 			setButtonSetting(n, n);
 		}
+	}
+
+	public void setController(Controller controller) {
+		if (_isRun) {
+			return;
+		}
+		if (controller!=null && controller.getType()!=Type.GAMEPAD) {
+			throw new IllegalArgumentException();
+		}
+		_controller = controller;
 	}
 
 	@Override
