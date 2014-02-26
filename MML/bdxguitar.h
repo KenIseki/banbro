@@ -1,5 +1,5 @@
 //------------------------------------------------------------------------------ Header.
-//_バンブラDXギターコード用ヘッダ ver1.4.1
+//_バンブラDXギターコード用ヘッダ ver1.5
 /*
   ※bdxchord.hを読み込み、SetChordType(BBS_Guitar) と記述すると
     GT関数にコード名を指定するだけで使用できます。
@@ -13,6 +13,7 @@
     1.3    20110828    全ての音階を1オクターブ下げた
     1.4    20120607    同じ音を重ねて鳴らさないようにした
     1.4.1  20120613    重複音を除く処理が足りなかったのを修正
+    1.5    20140226    EM7のフレット番号ミス修正
 */
 //------------------------------------------------------------------------------
 Int DS = 1;  // ダウンストローク
@@ -152,7 +153,7 @@ Function G_Ebadd9(Int ST, Str LEN){GuitarTab(6,6,8,8,6,6, 0,0,0,0,0,0, ST, LEN)}
 
 Function G_E(Int ST, Str LEN){GuitarTab(0,2,2,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Em(Int ST, Str LEN){GuitarTab(0,2,2,0,0,0, 0,0,0,0,0,0, ST, LEN)}
-Function G_E7(Int ST, Str LEN){GuitarTab(0,2,0,2,0,0, 0,0,0,0,0,0, ST, LEN)}
+Function G_E7(Int ST, Str LEN){GuitarTab(0,2,0,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_EM7(Int ST, Str LEN){GuitarTab(0,2,1,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Em7(Int ST, Str LEN){GuitarTab(0,2,0,0,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Edim(Int ST, Str LEN){GuitarTab(0,0,2,3,2,3, 1,1,0,0,0,0, ST, LEN)}
@@ -310,7 +311,7 @@ Function G_Bpadd9(Int ST, Str LEN){GuitarTab(0,3,2,0,3,0, 0,0,0,0,0,0, ST, LEN)}
 // Fb
 Function G_Fb(Int ST, Str LEN){GuitarTab(0,2,2,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Fbm(Int ST, Str LEN){GuitarTab(0,2,2,0,0,0, 0,0,0,0,0,0, ST, LEN)}
-Function G_Fb7(Int ST, Str LEN){GuitarTab(0,2,0,2,0,0, 0,0,0,0,0,0, ST, LEN)}
+Function G_Fb7(Int ST, Str LEN){GuitarTab(0,2,0,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_FbM7(Int ST, Str LEN){GuitarTab(0,2,1,1,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Fbm7(Int ST, Str LEN){GuitarTab(0,2,0,0,0,0, 0,0,0,0,0,0, ST, LEN)}
 Function G_Fbdim(Int ST, Str LEN){GuitarTab(0,0,2,3,2,3, 1,1,0,0,0,0, ST, LEN)}
