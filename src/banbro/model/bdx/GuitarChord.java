@@ -188,7 +188,7 @@ public class GuitarChord {
 			_fret = new int[] {6,6,8,6,8,6};
 			break;
 		case 4:
-			_fret = new int[] {0,2,0,2,0,0};
+			_fret = new int[] {0,2,0,1,0,0};
 			break;
 		case 5:
 			_fret = new int[] {1,3,1,2,1,1};
